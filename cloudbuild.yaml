@@ -23,7 +23,7 @@ steps:
     args: [
         "run",
         "deploy",
-        "mc-frontend",
+        "frontend",
         "--image",
         "${_LOCATION}-docker.pkg.dev/${_PROJECT}/${_REPOSITORY}/${_IMAGE}",
         "--region",
@@ -31,4 +31,5 @@ steps:
         # "--port",
         # "3000",
       ]
-    dir: "src/frontend"
+images:
+  - "${_LOCATION}-docker.pkg.dev/${_PROJECT}/${_REPOSITORY}/${_IMAGE}"
