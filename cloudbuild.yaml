@@ -8,6 +8,7 @@ steps:
         "build",
         "-t",
         "${_LOCATION}-docker.pkg.dev/${_PROJECT}/${_REPOSITORY}/${_IMAGE}",
+        ".",
       ]
   # Push the container image to Container Registry
   - name: "gcr.io/cloud-builders/docker"
