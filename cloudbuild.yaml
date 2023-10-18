@@ -20,7 +20,8 @@ steps:
   # Deploy container image to Cloud Run
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
     entrypoint: gcloud
-    args: [
+    args:
+      [
         "run",
         "deploy",
         "frontend",
@@ -28,8 +29,4 @@ steps:
         "${_LOCATION}-docker.pkg.dev/${_PROJECT}/${_REPOSITORY}/${_IMAGE}",
         "--region",
         "${_REGION}",
-        # "--port",
-        # "3000",
       ]
-images:
-  - "${_LOCATION}-docker.pkg.dev/${_PROJECT}/${_REPOSITORY}/${_IMAGE}"
