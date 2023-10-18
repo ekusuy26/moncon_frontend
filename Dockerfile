@@ -27,10 +27,5 @@ RUN yarn install
 COPY --from=builder /app/next.config.js ./
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
+
 CMD ["yarn", "start"]
-
-# FROM node:18.18.2-alpine
-
-# WORKDIR /app
-
-# CMD ["yarn","dev"]
